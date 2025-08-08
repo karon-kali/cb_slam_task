@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>cb_slam</name>
+  <version>0.1.0</version>
+  <description>
+    Launch-only package to start Gazebo with TurtleBot3, SLAM Toolbox mapping, and RViz.
+  </description>
+
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Build tool -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Build dependencies for Python launch scripts -->
+  <build_depend>launch</build_depend>
+  <build_depend>launch_ros</build_depend>
+  <build_depend>ament_index_python</build_depend>
+
+  <!-- Runtime dependencies -->
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>turtlebot3_gazebo</exec_depend>
+  <exec_depend>turtlebot3_description</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>slam_toolbox</exec_depend>
+  <exec_depend>turtlebot3_teleop</exec_depend> 
+  <exec_depend>nav2_bringup</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>tf2</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>tf2_geometry_msgs</exec_depend>
+  <depend>ament_index_cpp</depend>
+  <depend>yaml-cpp</depend>
+
+  <exec_depend>yaml_cpp_vendor</exec_depend>
+
+  <build_depend>rclcpp</build_depend>
+  <build_export_depend>rclcpp</build_export_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

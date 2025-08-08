@@ -1,0 +1,23 @@
+localization_score_node:
+  ros__parameters:
+    # Weights for different quality metrics (should sum to 1.0)
+    particle_convergence_weight: 0.3    # How well particles cluster around true pose
+    covariance_weight: 0.25             # AMCL's own uncertainty estimate
+    scan_match_weight: 0.25             # How well scan matches map at current pose
+    temporal_consistency_weight: 0.2    # Smoothness of pose over time
+    
+    # Thresholds for quality assessment
+    max_particle_spread_threshold: 2.0  # Maximum acceptable particle spread (meters)
+    max_covariance_threshold: 0.5       # Maximum acceptable pose covariance
+    scan_match_threshold: 0.8           # Minimum acceptable scan-to-map match ratio
+    max_pose_jump_threshold: 0.5        # Maximum acceptable pose jump between updates (meters)
+    
+    # Algorithm parameters
+    pose_history_size: 10               # Number of poses to keep for temporal analysis
+    evaluation_rate: 2.0                # Frequency of score calculation (Hz)
+    min_scan_points: 100                # Minimum valid scan points required for scan matching
+    
+    # Additional tuning parameters (optional)
+    # particle_weight_threshold: 0.1    # Minimum particle weight to consider
+    # scan_range_filter_min: 0.1        # Minimum scan range to use (meters)
+    # scan_range_filter_max: 10.0       # Maximum scan range to use (meters)
